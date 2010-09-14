@@ -1,0 +1,28 @@
+						MEMBERSHIP APPLICATION
+
+How did You Hear of Us:		<%= @app.recommendation %>
+<% if (@app.recommendation == "member") %>
+Member's Name:				<%= @app.recommended_name %>
+Relationship:				<%= @app.relationship %>
+<% end %>
+<% if (@app.recommendation == "affiliation") %>
+Affiliated with:			<%= @app.affiliation %>
+<% end %>		
+<% if (@app.recommendation == "advertisement") %>
+Advertisement Type:			<%= @app.advertisement %>
+<% end %>
+<% if (@app.recommendation == "other") %>
+Other Type:					<%= @app.other %>
+<% end %>		
+
+				APPLICANT DETAILS
+Name:						<%= @app.first_name %> <%= @app.middle_name %> <%= @app.last_name %>
+Address:					<%= @app.address %>
+City:						<%= @app.city %>
+State:						<%= @app.state %>
+Zip:						<%= @app.zip %>
+Home Number:				<%= @app.home_phone %>
+Work Number:				<%= @app.work_phone %>
+Cell Number:				<%= @app.cell_phone %>
+Email Address:				<%= @app.email_id %>
+

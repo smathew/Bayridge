@@ -1,0 +1,109 @@
+				LOAN APPLICATION
+
+Account Number:				<%= @app.account_number %>
+Amount of Loan requested:   <%= @app.requested_loan_amount %>
+Purpose of loan:			<%= @app.purpose_of_loan %>
+Loan Type:					<%= @app.loan_type %>
+How did You Hear of Us:		<%= @app.recommendation %>
+<% if (@app.recommendation == "member") %>
+Member's Name:				<%= @app.recommended_name %>
+Relationship:				<%= @app.relationship %>
+<% end %>
+<% if (@app.recommendation == "affiliation") %>
+Affiliated with:			<%= @app.affiliation %>
+<% end %>		
+<% if (@app.recommendation == "advertisement") %>
+Advertisement Type:			<%= @app.advertisement %>
+<% end %>
+<% if (@app.recommendation == "other") %>
+Other Type:					<%= @app.other %>
+<% end %>		
+
+				APPLICANT DETAILS
+Name:						<%= @app.first_name %> <%= @app.middle_name %> <%= @app.last_name %>
+Address:					<%= @app.address %>
+City:						<%= @app.city %>
+State:						<%= @app.state %>
+Zip:						<%= @app.zip %>
+<% if !@app.years_at_address.blank? %>
+Years at address:			<%= @app.years_at_address %>
+<% end %>
+<% if !@app.monthly_rent.blank? %>
+Monthly Rent/Payment:		<%= @app.monthly_rent %>	
+<% end %>
+<% if !@app.housing_type.blank? %>
+Housing Type:				<%= @app.housing_type %>	
+<% end %>
+<% if !@app.monthly_rent.blank? %>
+Monthly Rent/Payment:		<%= @app.monthly_rent %>	
+<% end %>
+Date of Birth:		<%= @app.date_of_birth %>	
+Home Number:				<%= @app.home_phone %>
+Work Number:				<%= @app.work_phone %>
+Cell Number:				<%= @app.cell_phone %>
+<% if !@app.best_time_daytime.blank? %>
+Best time to call in day:	<%= @app.best_time_daytime %>	
+<% end %>
+<% if !@app.best_time_evening.blank? %>
+Best time to call in evening:<%= @app.best_time_evening %>	
+<% end %>
+Email Address:				<%= @app.email_address %>
+Employer:					<%= @app.employer %>
+<% if !@app.employer_address.blank? %>
+Employer's address:			<%= @app.employer_address %>	
+<% end %>
+<% if !@app.employer_city.blank? %>
+Employer's city: 			<%= @app.employer_city %>	
+<% end %>
+<% if !@app.employer_state.blank? %>
+Employer's State:			<%= @app.employer_state %>	
+<% end %>
+<% if !@app.employer_zip.blank? %>
+Employer's Zip:				<%= @app.employer_zip %>	
+<% end %>
+<% if !@app.years_on_the_job.blank? %>
+Years on the job:			<%= @app.years_on_the_job %>	
+<% end %>
+<% if !@app.position.blank? %>
+Designation :				<%= @app.position %>	
+<% end %>
+<% if !@app.additional_income.blank? %>
+Additional Income:			<%= @app.additional_income %>	
+<% end %>
+<% if !@app.source_of_additional_income.blank? %>
+Source of Additional Income:<%= @app.source_of_additional_income %>	
+<% end %>
+<% if @app.loan_type == "joint" %>
+				CO-APPLICANT DETAILS
+Co-Applicant's First Name:	<%= @app.joint_first_name %>
+Co-Applicant's Middle Name:	<%= @app.joint_middle_name %>
+Co-Applicant's Last Name:	<%= @app.joint_last_name %>
+Co-Applicant's Address:		<%= @app.joint_address %>
+Co-Applicant's City:		<%= @app.joint_city %>
+Co-Applicant's State:		<%= @app.joint_state %>
+Co-Applicant's Zip:			<%= @app.joint_zip %>	
+	<% if !@app.joint_years_at_address.blank? %>
+Years at address for Joint:	<%= @app.joint_years_at_address %>	
+	<% end %>
+	<% if !@app.joint_monthly_rent.blank? %>
+Monthly Rent/Payment:		<%= @app.joint_monthly_rent %>	
+	<% end %>
+	<% if !@app.joint_housing_type.blank? %>
+Housing Type for Joint:		<%= @app.joint_housing_type %>	
+	<% end %>
+Joint's Date of Birth:		<%= @app.joint_date_of_birth %>
+Joint's Home Phone number:	<%= @app.joint_home_phone %>
+	<% if !@app.joint_work_phone.blank? %>
+Joint's work phone number:	<%= @app.joint_work_phone %>	
+	<% end %>
+	<% if !@app.joint_cell_phone.blank? %>
+Joint's cell phone number:	<%= @app.joint_cell_phone %>	
+	<% end %>
+	<% if !@app.best_time_in_day_to_call_joint.blank? %>
+Best time to call in day:	<%= @app.best_time_in_day_to_call_joint %>	
+	<% end %>
+	<% if !@app.best_time_in_evening_to_call_joint.blank? %>
+Best time to call in evening:<%= @app.best_time_in_evening_to_call_joint %>	
+	<% end %>
+Joint's Email address:		<%= @app.joint_email_address %>	
+<% end %>

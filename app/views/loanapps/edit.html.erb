@@ -1,0 +1,236 @@
+<h1>Editing loanapp</h1>
+
+<% form_for(@loanapp) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :account_number %><br />
+    <%= f.text_field :account_number %>
+  </p>
+  <p>
+    <%= f.label :purpose_of_loan %><br />
+    <%= f.text_field :purpose_of_loan %>
+  </p>
+  <p>
+    <%= f.label :requested_loan_amount %><br />
+    <%= f.text_field :requested_loan_amount %>
+  </p>
+  <p>
+    <%= f.label :loan_type %><br />
+    <%= f.text_field :loan_type %>
+  </p>
+  <p>
+    <%= f.label :recommendation %><br />
+    <%= f.text_field :recommendation %>
+  </p>
+  <p>
+    <%= f.label :recommended_name %><br />
+    <%= f.text_field :recommended_name %>
+  </p>
+  <p>
+    <%= f.label :relationship %><br />
+    <%= f.text_field :relationship %>
+  </p>
+  <p>
+    <%= f.label :affiliation %><br />
+    <%= f.text_field :affiliation %>
+  </p>
+  <p>
+    <%= f.label :advertisement %><br />
+    <%= f.text_field :advertisement %>
+  </p>
+  <p>
+    <%= f.label :other %><br />
+    <%= f.text_field :other %>
+  </p>
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :middle_name %><br />
+    <%= f.text_field :middle_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </p>
+  <p>
+    <%= f.label :years_at_address %><br />
+    <%= f.text_field :years_at_address %>
+  </p>
+  <p>
+    <%= f.label :monthly_rent/payment %><br />
+    <%= f.text_field :monthly_rent/payment %>
+  </p>
+  <p>
+    <%= f.label :housing_type %><br />
+    <%= f.text_field :housing_type %>
+  </p>
+  <p>
+    <%= f.label :social_security_number %><br />
+    <%= f.text_field :social_security_number %>
+  </p>
+  <p>
+    <%= f.label :date_of_birth %><br />
+    <%= f.text_field :date_of_birth %>
+  </p>
+  <p>
+    <%= f.label :home_phone %><br />
+    <%= f.text_field :home_phone %>
+  </p>
+  <p>
+    <%= f.label :work_phone %><br />
+    <%= f.text_field :work_phone %>
+  </p>
+  <p>
+    <%= f.label :cell_phone %><br />
+    <%= f.text_field :cell_phone %>
+  </p>
+  <p>
+    <%= f.label :best_time_daytime %><br />
+    <%= f.text_field :best_time_daytime %>
+  </p>
+  <p>
+    <%= f.label :best_time_evening %><br />
+    <%= f.text_field :best_time_evening %>
+  </p>
+  <p>
+    <%= f.label :email_address %><br />
+    <%= f.text_field :email_address %>
+  </p>
+  <p>
+    <%= f.label :employer %><br />
+    <%= f.text_field :employer %>
+  </p>
+  <p>
+    <%= f.label :employer_address %><br />
+    <%= f.text_field :employer_address %>
+  </p>
+  <p>
+    <%= f.label :employer_city %><br />
+    <%= f.text_field :employer_city %>
+  </p>
+  <p>
+    <%= f.label :employer_state %><br />
+    <%= f.text_field :employer_state %>
+  </p>
+  <p>
+    <%= f.label :employer_zip %><br />
+    <%= f.text_field :employer_zip %>
+  </p>
+  <p>
+    <%= f.label :years_on_the_job %><br />
+    <%= f.text_field :years_on_the_job %>
+  </p>
+  <p>
+    <%= f.label :position %><br />
+    <%= f.text_field :position %>
+  </p>
+  <p>
+    <%= f.label :annual_income %><br />
+    <%= f.text_field :annual_income %>
+  </p>
+  <p>
+    <%= f.label :additional_income %><br />
+    <%= f.text_field :additional_income %>
+  </p>
+  <p>
+    <%= f.label :source_of_additional_income %><br />
+    <%= f.text_field :source_of_additional_income %>
+  </p>
+  <p>
+    <%= f.label :joint_first_name %><br />
+    <%= f.text_field :joint_first_name %>
+  </p>
+  <p>
+    <%= f.label :joint_middle_name %><br />
+    <%= f.text_field :joint_middle_name %>
+  </p>
+  <p>
+    <%= f.label :joint_last_name %><br />
+    <%= f.text_field :joint_last_name %>
+  </p>
+  <p>
+    <%= f.label :joint_address %><br />
+    <%= f.text_field :joint_address %>
+  </p>
+  <p>
+    <%= f.label :joint_city %><br />
+    <%= f.text_field :joint_city %>
+  </p>
+  <p>
+    <%= f.label :joint_state %><br />
+    <%= f.text_field :joint_state %>
+  </p>
+  <p>
+    <%= f.label :joint_zip %><br />
+    <%= f.text_field :joint_zip %>
+  </p>
+  <p>
+    <%= f.label :joint_years_at_address %><br />
+    <%= f.text_field :joint_years_at_address %>
+  </p>
+  <p>
+    <%= f.label :joint_monthly_rent/payment %><br />
+    <%= f.text_field :joint_monthly_rent/payment %>
+  </p>
+  <p>
+    <%= f.label :joint_housing_type %><br />
+    <%= f.text_field :joint_housing_type %>
+  </p>
+  <p>
+    <%= f.label :joint_social_security_number %><br />
+    <%= f.text_field :joint_social_security_number %>
+  </p>
+  <p>
+    <%= f.label :joint_date_of_birth %><br />
+    <%= f.text_field :joint_date_of_birth %>
+  </p>
+  <p>
+    <%= f.label :joint_home_phone %><br />
+    <%= f.text_field :joint_home_phone %>
+  </p>
+  <p>
+    <%= f.label :joint_work_phone %><br />
+    <%= f.text_field :joint_work_phone %>
+  </p>
+  <p>
+    <%= f.label :joint_cell_phone %><br />
+    <%= f.text_field :joint_cell_phone %>
+  </p>
+  <p>
+    <%= f.label :best_time_in_day_to_call_joint %><br />
+    <%= f.text_field :best_time_in_day_to_call_joint %>
+  </p>
+  <p>
+    <%= f.label :best_time_in_evening_to_call_joint %><br />
+    <%= f.text_field :best_time_in_evening_to_call_joint %>
+  </p>
+  <p>
+    <%= f.label :joint_email_address %><br />
+    <%= f.text_field :joint_email_address %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @loanapp %> |
+<%= link_to 'Back', loanapps_path %>

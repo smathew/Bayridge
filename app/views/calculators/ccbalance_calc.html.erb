@@ -1,0 +1,184 @@
+<script type="text/javascript">
+				<!--
+				   function compress(s)
+				   {
+					 var numChars = s.length;
+					 var N;
+					 var ch = "";
+					 var newString = "";
+					 var foundDecimal = 0;
+					 for(N = 0; N <= numChars-1; N++)
+					 {
+					   ch = s.charAt(N);
+					   if ((ch == ".") || (ch == "0") || (ch == "1") || (ch == "2") ||
+						   (ch == "3") || (ch == "4") || (ch == "5") || (ch == "6") ||
+						   (ch == "7") || (ch == "8") || (ch == "9")
+						  )
+					   {
+						 if (ch == ".")
+						 {
+							if (foundDecimal == 0)
+							{
+							   foundDecimal = 1;
+							   newString = newString + ch;
+							} else {
+							   alert("Redundant decimal in " + s + "\nPlease correct and recalculate");
+							   return newString;
+							}
+						 } else {
+							newString = newString + ch;
+						 }
+					   }
+					   //alert("For iteration " + N + ", char = " + ch + " and string = " + newString);
+					 }
+					 newString.valueOf();
+					 return newString;
+				   }
+				
+				   function formatFloat(fnum, decplaces)
+				   {
+					  var str = "" + Math.round(eval(fnum) * Math.pow(10,decplaces));
+					  while (str.length <= decplaces)
+					  {
+						 str = "0" + str;
+					  }
+					  var decpoint = str.length - decplaces;
+					  return str.substring(0, decpoint) + "." + str.substring(decpoint, str.length);
+				   }
+				   function calculatePayment(form)
+				   {
+					  /* uses formula: payment = B / (1 - (1 / (1 + r)^t)) / r)
+					   *               where t = # of months, B = Loan amount, r = APR/12
+					   * source: Steve Rick
+					  */
+					  if (form.monthsUntilPayoff.value != 0)
+					  {
+						 var B = compress(form.amountOwed.value); // present balance of dollars owed
+						 if (B == 0) alert("Please enter a balance owed");
+						 var c = compress(form.futureCharges.value);
+						 var payment = 0;
+						 var r = compress(form.annualRate.value) / 1200; // APR: percent of unpaid balance to be paid each month
+						 //var rx = 1.0 + r/1200;
+						 var rx = 1.0 + r;
+						 var t = compress(form.monthsUntilPayoff.value);
+						 //var n = B * (rx - 1.0);
+						 var n = B * r;
+						 var d = 1.0 - Math.pow(rx, -t);
+						 if (d == 0)
+						 {
+						   alert("Please enter an interest rate.");
+						   payment = 0;
+						 } else {
+						   payment = n/d + parseFloat(c);
+						   payment = formatFloat(payment, 2);
+						 }
+						 form.balance.value = form.amountOwed.value;
+						 form.desired.value = t;
+						 form.monthly.value = payment;
+					  }
+					  if (form.currentPayment.value != 0)
+						 calculateTerm(form);
+				   }
+				   function calculateTerm(form)
+				   {
+					  var B = compress(form.amountOwed.value); // present balance of dollars owed
+					  if (B == 0) alert("Please enter a balance owed");
+					  var r = compress(form.annualRate.value) / 1200; // APR: percent of unpaid balance to be paid each month
+					  var p = compress(form.currentPayment.value) - compress(form.futureCharges.value) - (compress(form.annualFee.value) / 12);
+					  p = (p != 0) ? p : alert("Error: Your annual payment equals your annual charges plus annual fee");
+				
+					  if ( (((r * B) / p) >= 1) ||  (((r * B) / p) < 0))
+					  {
+						 alert("Your current payment and charges will lead to negative amortization. Please enter a different payment");
+						 return;
+					  }
+					  if (Math.log(1 + r)==0)
+					  {
+						alert("Please enter an interest rate");
+						var term = 0;
+				
+					  } else {
+						if (p!=0)
+						{
+						  var term = Math.ceil((-1 * Math.log(1 - (r * B) / p)/Math.log(1 + r)));
+						  form.current.value = form.currentPayment.value;
+						} else {
+						  var term = 0;
+						  form.current.value = 0;
+						}
+					  }
+					  form.months.value = (isNaN(form.months.value)) ? 0 : term;
+				//      return term;
+				   }
+				// -->
+				</script>
+				<div id="login">
+					<h1 class="tab">Financial Calculators</h1>
+					<div class="innercontent clearfix">
+    				  <div class="innercontent body">
+                      	<h4>Credit Card Balance Calculator</h4>
+                      	  <form id="monthPayment" method="post" action="">
+                          <table class="calcs2">
+                              <tr>
+                                  <td class="rightalign">Current balance</td>
+                                  <td class="bold">$</td>
+                                  <td><input type="text" name="amountOwed" size="9" value="0" /></td>
+                              </tr>
+                              <tr>
+                                  <td class="rightalign">Current monthly payment</td>
+                                  <td class="bold">$</td>
+                                  <td><input type="text" name="currentPayment" size="9" value="0" /></td>
+                              </tr>
+                              <tr>
+                                  <td class="rightalign">Estimated average future monthly charges</td>
+                                  <td class="bold">$</td>
+                                  <td><input type="text" name="futureCharges" size="9" value="0" /></td>
+                              </tr>
+                              <tr>
+                                  <td class="rightalign">Goal: Months until payoff</td>
+                                  <td>&nbsp;</td>
+                                  <td><input type="text" name="monthsUntilPayoff" size="9" value="0" /></td>
+                              </tr>
+                              <tr>
+                                  <td class="rightalign">Annual fee</td>
+                                  <td class="bold">$</td>
+                                  <td><input type="text" name="annualFee" size="9" value="0" /></td>
+                              </tr>
+                              <tr>
+                                  <td class="rightalign">Annual percentage rate</td>
+                                  <td class="bold">%</td>
+                                  <td><input type="text" name="annualRate" size="9" value="0" /></td>
+                              </tr>
+                              <tr>
+                                  <td class="center" colspan="3">
+                                      <input name="activate" type="button" onclick="calculatePayment(this.form)" value="Calculate" />&nbsp;
+                                      <input type="button" onclick="this.form.reset()" value="Clear" />
+                                  </td>
+                              </tr>
+                          </table>
+                          <hr />
+                            <table>
+                                <tr>
+                                    <td>
+                                      If you want to pay off your balance of<br />
+                                      $<input type="text" name="balance" size="8" value="0" /> in 
+                                      <input type="text" name="desired" size="3" value="0" />months,<br />
+                                      stop making charges to your card and make a<br />
+                                      monthly payment of &nbsp;$
+                                      <input type="text" name="monthly" size="8" value="0" />.
+                                      <p class="red">(If you continue to make charges, notice the effect<br />
+                                      on your calculations&#151;and on your budget!)</p>
+                                      <p>Otherwise, at your current payment of $
+                                      <input type="text" name="current" size="8" value="0" />,
+                                      <br />
+                                      you will pay off your balance in &nbsp; 
+                                      <input type="text" name="months" size="3" value="0" /> 
+                                      months.</p>
+                                </td>
+                                </tr>
+                            </table>
+                   	  	</form>
+					  </div>
+                    </div>
+                    <h1 class="tabbottom"><%= link_to "Back", "javascript: history.back();", :class => "backbottomlink" %></h1>
+				</div>

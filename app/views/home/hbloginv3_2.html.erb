@@ -1,0 +1,46 @@
+<div id="login">
+					<h1 class="tab">BAY RIDGE FEDERAL CREDIT UNION</h1>
+					<div class="innercontent clearfix">
+                    	<div class="innercontent body">
+							<p>
+                            	Discover the fast, convenient access available through Home Banking. 
+                            	With your Password you can see your account, view transactions and even 
+                                transfer funds - all at the touch of your fingertips. And if you 			
+                            	ever need help, we're just an <%= mail_to "info@brfcu.org", "Email" %> away!</p>
+							<form id="hbloginF" method="post" action="https://www.brfcu.org/hbv3_2/login.asp">
+                                <table>
+                                    <tr>
+                                        <td><table class="login">
+                                                <tr>
+                                                    <td colspan="2">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong><label for="hbloginFaccount">Account Number</label></strong></td>
+                                                    <td><input type="text" name="account" id="hbloginFaccount" size="10" class="formfield" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong><label for="hbloginFpassword">PIN/Password</label></strong></td>
+                                                    <td><input type="password" name="pin" id="hbloginFpassword" size="10" class="formfield" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><INPUT TYPE="submit" VALUE="LOGIN" /></td>
+                                                </tr>
+                                                </table>
+                                    	</td>
+                                        <td>
+                                            <p class="centertext">
+                                                <%= link_to image_tag("questionmark.gif", :alt => "Question Mark"), faq_path %><br />
+                                            <strong><%= link_to "Need help?", faq_path %></strong><br />
+                                                Click here to<br />
+                                                obtain contact<br />
+                                                information.<br />
+                                                &nbsp;
+                                            </p>
+                                    	</td>
+                                    </tr>
+                                </table>
+                            </form>
+                    	</div>
+                    </div>
+                    <h1 class="tabbottom"><%= link_to "Back", "javascript: history.back();", :class => "backbottomlink" %></h1>
+                </div>

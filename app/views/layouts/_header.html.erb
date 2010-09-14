@@ -1,0 +1,17 @@
+<div id="container">
+		<%= link_to image_tag("headermain.gif", :alt => 'Bay Ridge Federal Credit Union'), root_path %>
+		<div id="outercontent" class="clearfix">
+			<div class="outerleft">
+				<ul class="menu">
+					<li><%= link_to "HOME BANKING", hbloginv3_2_path %></li>
+					<li><%= link_to "PRODUCTS &amp; SERVICES", prodnserv_path %></li>
+					<li><%= link_to "SAVINGS RATES", rates_savings_path %></li>
+					<li><%= link_to "LOAN RATES", rates_loan_path %></li>
+					<li><%= link_to "ABOUT US", aboutus_path %></li>
+					<li><%= link_to "CALCULATORS", calcs_path %></li>
+					<li><%= link_to "HOW TO JOIN", howtojoin_path %></li>
+					<li><%= link_to "DIRECTIONS", directions_path %></li>
+					<li><%= mail_to "customerservice@brfcu.org", "CONTACT US" %></li>
+				</ul>
+			</div>
+			<div class="outerright">

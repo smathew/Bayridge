@@ -1,0 +1,366 @@
+<p style="color: green", align=center><%= flash[:notice] %></p>
+<table>
+	<tr><td>
+	<strong>Account Number:</strong>
+	  </td><td>
+	  <%=h @loanapp.account_number %>
+	</td></tr>
+	
+	<tr><td>
+	<strong>Purpose of loan:</strong>
+	  </td><td>
+	  <%=h @loanapp.purpose_of_loan %>
+	</td></tr>
+	
+	<tr><td>
+	<strong>Requested loan amount:</strong>
+	  </td><td>
+	  <%=h @loanapp.requested_loan_amount %>
+	</td></tr>
+	
+	<tr><td>
+	<strong>Loan type:</strong>
+	  </td><td>
+	  <%=h @loanapp.loan_type %>
+	</td></tr>
+	
+	<tr><td>
+	  <strong>Recommendation:</strong>
+	  </td><td>
+	  <%=h @loanapp.recommendation %>
+	</td></tr>
+	<% if (@loanapp.recommendation == "member") %>
+	<tr><td>
+	  <strong>Recommended name:</strong>
+	  </td><td>
+	  <%=h @loanapp.recommended_name %>
+	</td></tr>
+
+	<tr><td>
+	  <strong>Relationship:</strong>
+	  </td><td>
+	  <%=h @loanapp.relationship %>
+	</td></tr>
+	<% end %>
+
+	<% if (@loanapp.recommendation == "affiliation") %>
+	<tr><td>
+	  <strong>Affiliation:</strong>
+	  </td><td>
+	  <%=h @loanapp.affiliation %>
+	</td></tr>
+	<% end %>
+
+	<% if (@loanapp.recommendation == "advertisement") %>
+	<tr><td>
+	  <strong>Advertisement:</strong>
+	  </td><td>
+	  <%=h @loanapp.advertisement %>
+	</td></tr>
+	<% end %>
+	<% if (@loanapp.recommendation == "other") %>
+	<tr><td>
+	  <strong>Other:</strong>
+	  </td><td>
+	  <%=h @loanapp.other %>
+	</td></tr>
+	<% end %>
+	
+	<tr><td align="center">
+	  <strong>APPLICANT DETAILS</strong>
+	</td></tr>
+	<tr><td>
+	  <strong>First name:</strong>
+	  </td><td>
+	  <%=h @loanapp.first_name %>
+	</td></tr>
+
+	<tr><td>
+	  <strong>Middle Name:</strong>
+	  </td><td>
+	  <%=h @loanapp.middle_name %>
+	</td></tr>
+
+	<tr><td>
+	  <strong>Last Name:</strong>
+	  </td><td>
+	  <%=h @loanapp.last_name %>
+	</td></tr>
+
+	<tr><td>
+	  <strong>Address:</strong>
+	  </td><td>
+	  <%=h @loanapp.address %>
+	</td></tr>
+
+	<tr><td>
+	  <strong>City:</strong>
+	  </td><td>
+	  <%=h @loanapp.city %>
+	</td></tr>
+
+	<tr><td>
+	  <strong>State:</strong>
+	  </td><td>
+	  <%=h @loanapp.state %>
+	</td></tr>
+	
+	<tr><td>
+	  <strong>Zip:</strong>
+	  </td><td>
+	  <%=h @loanapp.zip %>
+	</td></tr>
+	
+	<% if !@loanapp.years_at_address.blank? %>
+	<tr><td>
+	  <strong>Years at address:</strong>
+	  </td><td>
+	  <%=h @loanapp.years_at_address %>
+	</td></tr>
+	<% end %>
+	
+	<% if !@loanapp.monthly_rent.blank? %>
+	<tr><td>
+	  <strong>Monthly rent/payment:</strong>
+	  </td><td>
+	  <%=h @loanapp.monthly_rent %>
+	</td></tr>
+	<% end %>
+	
+	<% if !@loanapp.housing_type.blank? %>
+	<tr><td>
+	  <strong>Housing type:</strong>
+	  </td><td>
+	  <%=h @loanapp.housing_type %>
+	</td></tr>
+	<% end %>
+	
+	<tr><td>
+	  <strong>Date of birth:</strong>
+	  </td><td>
+	  <%=h @loanapp.date_of_birth %>
+	</td></tr>
+	
+	<tr><td>
+	  <strong>Home Phone:</strong>
+	  </td><td>
+	  <%=h @loanapp.home_phone %>
+	</td></tr>
+
+	<% if !@loanapp.work_phone.blank? %>
+	<tr><td>
+	  <strong>Work Phone:</strong>
+	  </td><td>
+	  <%=h @loanapp.work_phone %>
+	</td></tr>
+	<% end %>
+	
+	<% if !@loanapp.cell_phone.blank? %>
+	<tr><td>
+	  <strong>Cell Phone:</strong>
+	  </td><td>
+	  <%=h @loanapp.cell_phone %>
+	</td></tr>
+	<% end %>
+	
+	<% if !@loanapp.best_time_daytime.blank? %>
+	<tr><td>
+	  <strong>Best time to call in daytime:</strong>
+	  </td><td>
+	  <%=h @loanapp.best_time_daytime %>
+	</td></tr>
+	<% end %>
+
+	<% if !@loanapp.best_time_evening.blank? %>
+	<tr><td>
+	  <strong>Best time to call in evening:</strong>
+	  </td><td>
+	  <%=h @loanapp.best_time_evening %>
+	</td></tr>
+	<% end %>
+	
+	<tr><td>
+	  <strong>Email Address:</strong>
+	  </td><td>
+	  <%=h @loanapp.email_address %>
+	</td></tr>
+	
+	<tr><td>
+	  <strong>Employer:</strong>
+	  </td><td>
+	  <%=h @loanapp.employer %>
+	</td></tr>
+	
+	<% if !@loanapp.employer_address.blank? %>
+		<tr><td>
+		  <strong>Employer address:</strong>
+		  </td><td>
+		  <%=h @loanapp.employer_address %>
+		</td></tr>
+		<tr><td>
+		  <strong>Employer city:</strong>
+		  </td><td>
+		  <%=h @loanapp.employer_city %>
+		</td></tr>
+		
+		<tr><td>
+		  <strong>Employer state:</strong>
+		  </td><td>
+		  <%=h @loanapp.employer_state %>
+		</td></tr>
+		
+		<tr><td>
+		  <strong>Employer zip:</strong>
+		  </td><td>
+		  <%=h @loanapp.employer_zip %>
+		</td></tr>
+	<% end %>
+	<% if !@loanapp.years_on_the_job.blank? %>
+		<tr><td>
+		  <strong>Years on the job:</strong>
+		  </td><td>
+		  <%=h @loanapp.years_on_the_job %>
+		</td></tr>
+	<% end %>
+	<% if !@loanapp.position.blank? %>
+	<tr><td>
+	  <strong>Position:</strong>
+	  </td><td>
+	  <%=h @loanapp.position %>
+	</td></tr>
+	<% end %>
+	<% if !@loanapp.annual_income.blank? %>
+	<tr><td>
+	  <strong>Annual income:</strong>
+	  </td><td>
+	  <%=h @loanapp.annual_income %>
+	</td></tr>
+	<% end %>
+	<% if !@loanapp.additional_income.blank? %>
+	<tr><td>
+	  <strong>Additional income:</strong>
+	  </td><td>
+	  <%=h @loanapp.additional_income %>
+	</td></tr>
+	<% end %>
+	<% if !@loanapp.source_of_additional_income.blank? %>
+	<tr><td>
+	  <strong>Source of additional income:</strong>
+	  </td><td>
+	  <%=h @loanapp.source_of_additional_income %>
+	</td></tr>
+	<% end %>
+	<% if ( @loanapp.loan_type == "joint" && !@loanapp.joint_first_name.blank?)%>
+		<tr><td>
+		  <strong>Joint's first_name:</strong>
+		  </td><td>
+		  <%=h @loanapp.joint_first_name %>
+		</td></tr>
+		
+		<tr><td>
+		  <strong>Joint's middle name/Initial:</strong>
+		  </td><td>
+		  <%=h @loanapp.joint_middle_name %>
+		</td></tr>
+		
+		<tr><td>
+		  <strong>Joint's Last Name:</strong>
+		  </td><td>
+		  <%=h @loanapp.joint_last_name %>
+		</td></tr>
+		
+		<tr><td>
+		  <strong>Joint's address:</strong>
+		  </td><td>
+		  <%=h @loanapp.joint_address %>
+		</td></tr>
+		
+		<tr><td>
+		  <strong>Joint's city:</strong>
+		  </td><td>
+		  <%=h @loanapp.joint_city %>
+		</td></tr>
+		
+		<tr><td>
+		  <strong>Joint's State:</strong>
+		  </td><td>
+		  <%=h @loanapp.joint_state %>
+		</td></tr>
+		
+		<tr><td>
+		  <strong>Joint's zip:</strong>
+		  </td><td>
+		  <%=h @loanapp.joint_zip %>
+		</td></tr>
+		<% if !@loanapp.joint_years_at_address.blank? %>
+		<tr><td>
+		  <strong>Joint's years at address:</strong>
+		  </td><td>
+		  <%=h @loanapp.joint_years_at_address %>
+		</td></tr>
+		<% end %>
+		<% if !@loanapp.joint_monthly_rent.blank? %>
+		<tr><td>
+		  <strong>Joint's monthly rent/payment:</strong>
+		  </td><td>
+		  <%=h @loanapp.joint_monthly_rent %>
+		</td></tr>
+		<% end %>
+		<% if !@loanapp.joint_housing_type.blank? %>
+		<tr><td>
+		  <strong>Joint's housing type:</strong>
+		  </td><td>
+		  <%=h @loanapp.joint_housing_type %>
+		</td></tr>
+		<% end %>
+		
+		<tr><td>
+		  <strong>Joint's date of birth:</strong>
+		  </td><td>
+		  <%=h @loanapp.joint_date_of_birth %>
+		</td></tr>
+		
+		<tr><td>
+		  <strong>Joint's home phone:</strong>
+		  </td><td>
+		  <%=h @loanapp.joint_home_phone %>
+		</td></tr>
+		<% if !@loanapp.joint_work_phone.blank? %>
+		<tr><td>
+		  <strong>Joint's work phone:</strong>
+		  </td><td>
+		  <%=h @loanapp.joint_work_phone %>
+		</td></tr>
+		<% end %>
+		<% if !@loanapp.joint_cell_phone.blank? %>
+		<tr><td>
+		  <strong>Joint's cell phone:</strong>
+		  </td><td>
+		  <%=h @loanapp.joint_cell_phone %>
+		</td></tr>
+		<% end %>
+		<% if !@loanapp.best_time_in_day_to_call_joint.blank? %>
+		<tr><td>
+		  <strong>Best time in day to call joint:</strong>
+		  </td><td>
+		  <%=h @loanapp.best_time_in_day_to_call_joint %>
+		</td></tr>
+		<% end %>
+		<% if !@loanapp.best_time_in_evening_to_call_joint.blank? %>
+		<tr><td>
+		  <strong>Best time in evening to call joint:</strong>
+		  </td><td>
+		  <%=h @loanapp.best_time_in_evening_to_call_joint %>
+		</td></tr>
+		<% end %>
+		<tr><td>
+		  <strong>Joint's email address:</strong>
+		  </td><td>
+		  <%=h @loanapp.joint_email_address %>
+		</td></tr>
+	<% end %>
+	
+</table>
+<br />
+<p align=center>
+<%= link_to "Go Home", root_path %></p>

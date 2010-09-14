@@ -1,0 +1,76 @@
+<h1>Editing memberapp</h1>
+
+<% form_for(@memberapp) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :recommendation %><br />
+    <%= f.text_field :recommendation %>
+  </p>
+  <p>
+    <%= f.label :recommended_name %><br />
+    <%= f.text_field :recommended_name %>
+  </p>
+  <p>
+    <%= f.label :relationship %><br />
+    <%= f.text_field :relationship %>
+  </p>
+  <p>
+    <%= f.label :affiliation %><br />
+    <%= f.text_field :affiliation %>
+  </p>
+  <p>
+    <%= f.label :advertisement %><br />
+    <%= f.text_field :advertisement %>
+  </p>
+  <p>
+    <%= f.label :other %><br />
+    <%= f.text_field :other %>
+  </p>
+  <p>
+    <%= f.label :fname %><br />
+    <%= f.text_field :fname %>
+  </p>
+  <p>
+    <%= f.label :mname %><br />
+    <%= f.text_field :mname %>
+  </p>
+  <p>
+    <%= f.label :lname %><br />
+    <%= f.text_field :lname %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </p>
+  <p>
+    <%= f.label :homeph %><br />
+    <%= f.text_field :homeph %>
+  </p>
+  <p>
+    <%= f.label :workph %><br />
+    <%= f.text_field :workph %>
+  </p>
+  <p>
+    <%= f.label :cellph %><br />
+    <%= f.text_field :cellph %>
+  </p>
+  <p>
+    <%= f.label :emailid %><br />
+    <%= f.text_field :emailid %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @memberapp %> |
+<%= link_to 'Back', memberapps_path %>

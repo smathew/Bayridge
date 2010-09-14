@@ -1,0 +1,972 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	background-color: #003366;
+	font-family: verdana;
+}
+
+img {
+	border: 0 none;
+}
+
+
+h1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #000000;
+} /* Bold Black Large Header used on prodserv */
+
+h2 {
+	font-family: verdana;
+	font-size: 12px;
+	font-weight: bold;
+} /* Bold Black Large Header */
+
+h3.center {
+	font-family: verdana;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+} /* Bold Black Large Centered */
+
+h3 {
+	font-family: verdana;
+	font-size: 100%;
+	font-weight: bold;
+} /* Bold Black Header */
+
+h4 {
+	font-family: verdana, arial;
+	font-size: 14px;
+	font-weight: bold;
+	color: #007963;
+	text-transform: uppercase;
+	text-align: center;
+} /* Capital Bold Teal Header */
+
+h4.small {
+	text-transform: none;
+	text-align: left;
+} /* Capital Bold Teal Header */
+
+h4.center {
+	text-transform: none;
+	text-align: center;
+} /* Capital Bold Teal Header */
+
+h5 {
+	font-family: verdana, arial;
+	font-size: 16px;
+	font-weight: bold;
+	color: #B53431;
+	margin-right:auto
+} /* Large bold red on rates_savings */
+
+hr {
+  border: 3;
+  align: center;
+  color: #000066;
+  width: 100%; 
+}
+
+
+.smallprint {
+	font-size: 9px;
+}
+
+p.red {
+	font-family: verdana, arial;
+	font-size: 11px;
+	color: #B53431;
+	margin-right:auto
+} /* small red on calcs_credit */
+
+
+
+
+
+.clearfix {
+	height: 1%;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.centertext {
+	text-align: center;
+}
+
+#container {
+	width: 692px;
+	margin: 0 auto 40px auto;
+}
+
+#container #bottomborder {
+	background-image: url(../images/bottombkg.gif);
+	background-repeat: repeat-x;
+	background-position: top left;
+	height: 5px;
+}
+
+#header {
+	text-decoration: none;
+}
+
+#header img {
+	display: block;
+	border: 0 none;
+}
+
+#outercontent {
+	background-image: url(../images/leftlinks_bkg.gif);
+	background-repeat: repeat-y;
+	background-position: top left;
+}
+
+#outercontent .outerleft {
+	float: left;
+	width: 166px;
+}
+
+#outercontent .outerleft .menu {
+	list-style-type: none;
+	margin: 10px 0 0 10px;
+	padding: 0;
+}
+
+#outercontent .outerleft .menu li {
+	display: block;
+	margin-top: 5px;
+}
+
+#outercontent .outerleft .menu li a {
+	display: block;
+	width: 139px;
+	height: 21px;
+	line-height: 21px;
+	color: #000000;
+	font-weight: bold;
+	font-family: arial;
+	padding-left: 10px;
+	background-image: url(../images/button_off.gif);
+	background-repeat: repeat: none;
+	background-position: top left;
+	text-decoration: none;
+}
+
+#outercontent .outerleft .menu li a:hover {
+	background-image: url(../images/button_on.gif);
+}
+
+#outercontent .outerright {
+	padding-top: 20px;
+	margin-left: 166px;
+	padding-left: 5px;
+	background-color: #e7e7ef;
+	padding-bottom: 10px;
+}
+
+#outercontent .outerright .tab {
+	width: 489px;
+	height: 21px;
+	background-image: url(../images/tab_blank.gif);
+	background-position: top left;
+	background-repeat: no-repeat;
+	font-size: 1em;
+	line-height: 21px;
+	color: #366381;
+	font-family: arial;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0 0 0 25px;
+}
+
+
+#outercontent .outerright .tabbottom {
+	width: 489px;
+	height: 28px;
+	background-image: url(../images/back_blank.gif);
+	background-position: top left;
+	background-repeat: no-repeat;
+	font-size: 11px;
+	line-height: 21px;
+	color: #366381;
+	font-family: arial;
+	font-weight: bold;
+	text-align:right;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0 0 0 25px;
+}
+
+#outercontent .outerright p.legal {
+	color: #808080;
+	font-size: .8em;
+	padding: 0 10px;
+	margin-top: 20px;
+}
+
+#outercontent .outerright p.logos {
+}
+
+#outercontent .innercontent {
+	padding-top: 20px;
+	background-color: #f2f2f9;
+	width: 512px;
+	border-right: 1px solid #a5a6a5;
+	/*
+	border-bottom: 1px solid #a5a6a5;
+	*/
+	border-left: 1px solid #a5a6a5;
+}
+
+
+
+#outercontent .innercontent main {
+	float: left;
+	height: 100%;
+	width: 75%;
+	border: 1px solid #000000;
+	background-color: #ffffff;
+	padding: 10px;
+	align: center;
+}
+
+
+
+
+
+
+/* tables*/
+table { 
+	width: 370px;
+	border-width: 1px;
+	border-spacing: 3px;
+	border-style: solid;
+	border-color: #000000;
+	color: #000000;
+	line-height: 22px;
+	margin-left:auto; 
+	margin-right:auto; 
+	table-spacing: 2px;
+	border-style: outset;
+	text-align: center;
+}
+
+
+table.calcs  { 
+	width: 340px;
+	border-width: 1px;
+	border-spacing: 3px;
+	border-style: solid;
+	border-color: #000000;
+	color: #10516B;
+	line-height: 14px;
+	margin-left:auto; 
+	margin-right:auto; 
+	table-spacing: 2px;
+	padding: 1px;
+	border-style: outset;
+}
+table.calcs tr.row1 { 
+	background-color: #EDF2F8;
+	padding: 10px;
+	border-width: 1px;
+	border-color: #000000;
+	border-style: solid;
+	border-width: 1px;
+}
+table.calcs tr.row2 { 
+	background-color: #DDE7F0;
+	padding: 5px;
+	border-width: 1px;
+	border-color: #000000;
+	border-style: solid;
+	border-width: 1px;
+}
+
+
+table.calcs tr.row2# p { 
+	background-color: #DDE7F0;
+	padding: 5px;
+	border-color: #000000;
+}
+
+
+
+table.calcs2  { 
+	width: 380px;
+	border-width: 1px;
+	border-spacing: 3px;
+	border-style: solid;
+	border-color: #000000;
+	background: #E2E6EB;
+	color: #000000;
+	line-height: 14px;
+	margin-left:auto; 
+	margin-right:auto; 
+	table-spacing: 2px;
+	border-style: outset;
+	cell-padding: 10px;
+	line-height: 18px;
+}
+table.calcs2 th { 
+	background-color: #CECBCE;
+	text-align: center;
+	font-weight: bold;
+}
+
+table.calcs2 td.rightalign { 
+	text-align: right;
+	padding-right: 3px;
+}
+table.calcs2 td.rightsmall { 
+	text-align: right;
+	padding-right: 3px;
+	font-size: 10px;
+}
+table.calcs2 td.leftalign { 
+	text-align: left;
+}
+table.calcs2 td.center { 
+	text-align: center;
+}
+table.calcs2 td.bold { 
+	font-weight: bold;
+	text-align: right;
+}
+table.calcs2 td.boldcenter { 
+	font-weight: bold;
+	text-align: center;
+}
+table.calcs2 td.red { 
+	font-weight: bold;
+	text-align: left;
+	color: #AE0000;
+	font-family: verdana;
+	font-size: 16px;
+}
+table.calcs2 td.redright { 
+	font-weight: bold;
+	text-align: right;
+	color: #AE0000;
+	font-family: verdana;
+	font-size: 16px;
+}
+
+
+
+table.loanapp {
+	width:450px;
+}
+table.loanapp th {
+	font: bold 11pt Verdana, Arial, Helvetica, sans-serif; 
+	color: #1E274E;
+	background: #D5E0FD;
+	padding: 4px;
+	border: thin dotted Gray;
+}
+
+
+
+
+table.rates  { 
+	border-collapse: separate;
+	width: 470px;
+	border-width: 1px;
+	border-spacing: 0px;
+	border-style: solid;
+	border-color: gray;
+	line-height: 14px;
+	margin-left:auto; 
+	margin-right:auto; 
+	table-spacing: 2px;
+	padding: 3px;
+	border-style: outset;
+}
+
+table.rates th { 
+	text-align: center; 
+	font-weight: bold;
+	vertical-align: baseline;
+	border-width: 1px;
+	padding: 3px;
+	border-style: solid;
+	border-color: #F3F1EC;
+	background-color: #4B79A5;
+	color: #ffffff;
+	font-size:14px;
+	-moz-border-radius: ;
+	text-align: left;	
+}
+
+table.rates td { 
+	vertical-align: middle;
+	horizontal-align: middle;
+	border-width: 1px;
+	padding: 0px;
+	border-style: solid;
+	border-color: gray;
+	background-color: #F3F3F3;
+	text-align:center;
+	padding: 3px;
+	font-size: 12px;
+	-moz-border-radius: ;
+}
+
+table.rates td.smallprint { 
+	vertical-align: middle;
+	horizontal-align: middle;
+	border-width: 1px;
+	padding: 0px;
+	border-style: solid;
+	border-color: gray;
+	background-color: #e7e7ef;
+	text-align:center;
+	padding: 3px;
+	font-size: 9px;
+	-moz-border-radius: ;
+}
+
+table.rates td.lightblue { 
+	text-align: center; 
+	font-weight: bold;
+	vertical-align: baseline;
+	border-width: 1px;
+	padding: 3px;
+	border-style: solid;
+	border-color: #F3F1EC;
+	background-color: #C5D5E4;
+	color: #676767;
+	text-align: center;
+	font-size:14px
+	-moz-border-radius: ;
+}
+
+table.rates td.left { 
+	vertical-align: middle;
+	horizontal-align: left;
+	border-width: 1px;
+	padding: 0px;
+	border-style: solid;
+	border-color: gray;
+	background-color: #F3F3F3;
+	text-align:left;
+	padding: 3px;
+	font-size: 12px;
+}
+
+table.rates td.leftbold { 
+	vertical-align: middle;
+	horizontal-align: left;
+	border-width: 1px;
+	padding: 0px;
+	border-style: solid;
+	border-color: gray;
+	background-color: #F3F3F3;
+	text-align:left;
+	padding: 3px;
+	font-size: 12px;
+	font-weight: bold;
+}
+table.rates tr.row0 { 
+	border: 3px solid blue;
+	background-color: #C5D5E4;
+}
+
+
+
+table.login  { 
+	width: 146px;
+	height: 107px;
+	align: center;
+	border: 0 none;
+	background-color: #4B79A5;
+	padding: 3px;
+	color: ffffff;
+}
+
+
+
+
+
+
+/********************/
+/*  INDEX SPECIFIC  */
+/********************/
+
+#index .innerleft {
+	float: left;
+	height: 100%;
+	width: 45%;
+}
+
+#index .innerleft .innerad img {
+	border: 1px solid #000000;
+	margin: 0 0 0 10px;
+}
+
+#index .innerright {
+	float: left;
+	margin-left: 10px;
+}
+
+#index .innerright ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	width: 250px;
+}
+
+#index .innerright ul li {
+	display: block;
+	margin-bottom: 1em;
+	border: 1px solid #000000;
+	background-color: #ffffff;
+	padding: 5px;
+	width: 100%;
+}
+
+#index .innerright ul li h3 {
+	margin: 0;
+	padding-left: 15px;
+	background-image: url(../images/grayarrow.gif);
+	background-position: center left;
+	background-repeat: no-repeat;
+	color: #990000;
+}
+
+#index .innerright ul li.hb {
+	font-size: .9em;
+}
+
+#index .innerright ul li.hb a {
+	background-image: url(../images/grayarrow.gif);
+	background-position: center left;
+	background-repeat: no-repeat;
+	display: block;
+	text-decoration: none;
+	color: #000080;
+	font-family: verdana;
+	font-weight: bold;
+	padding-left: 15px;
+	font-size: 1.1em;
+}
+
+#index .innerright ul li.hb a.image {
+	float: left;
+	width: 86px;
+	height: 77px;
+	background-image: url(../images/mousepad_off.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+	text-decoration: none;
+}
+
+#index .innerright ul li.hb a.image:hover {
+	background-image: url(../images/mousepad_on.gif);
+}
+
+#index .innerright ul li.warning h3 {
+	margin: 0;
+	padding-left: 15px;
+	background-image: url(../images/grayarrow.gif);
+	background-position: center left;
+	background-repeat: no-repeat;
+	color: #990000;
+}
+
+#index .innerright ul li.warning p {
+	font-weight: bold;
+	text-align: center;
+	font-size: 1.2em;
+	line-height: 1.2em;
+}
+
+#index .innerright ul li.closings h3 {
+	margin-bottom: 10px;
+}
+
+#index .innerright ul li.closings img {
+	float: left;
+}
+#index .innerright ul li.closings dl {
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	font-size: .8em;
+}
+#index .innerright ul li.closings dl dt {
+	display: block;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+#index .innerright ul li.closings dl dd {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+
+/********************/
+/*  LOGIN SPECIFIC  */
+/********************/  
+
+#login .innercontent .body {
+	float: left;
+	height: 100%;
+	width: 95%;
+	border: 1px solid #000000;
+	background-color: #ffffff;
+	margin: 0 5px 5px 5px;
+	padding: 0 10px 5px 5px;
+	align: center;
+}
+
+#login .innercontent .bodymargin {
+	float: left;
+	height: 100%;
+	width: auto;
+	border: 1px solid #000000;
+	background-color: #ffffff;
+	margin: 0 5px 5px 5px;
+	padding: 0 15px 10px 15px;
+	align: center;
+}
+
+#login .innercontent .bodymarginnarrow {
+	float: left;
+	height: 100%;
+	width: auto;
+	border: 1px solid #000000;
+	background-color: #ffffff;
+	margin: 0 5px 5px 5px;
+	padding: 0 10px 5px 10px;
+	align: center;
+}
+
+#login .innercontent .login {
+	width: 240px;
+	height: 28px;
+	background-image: url(../images/signin.gif);
+	background-position: top left;
+	background-repeat: no-repeat;
+	font-size: 1em;
+	line-height: 21px;
+	color: #FFF;
+	font-family: arial;
+	font-weight: bold;
+	margin: 0;
+	padding: 0 0 0 0px;
+}
+
+
+
+
+
+
+
+.nobull {
+	list-style: none;
+}
+
+
+
+
+
+/* links */
+
+			a.rates {
+				text-align: center;
+				font : verdana;
+				font-size: 14px;
+				color : #B53431;
+				font-weight: bold;
+				text-decoration : underline;
+
+			} 
+			a.backbottomlink {
+				font : normal 8pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #007963;
+				text-decoration : none;
+				font-size: 11px;
+				text-transform: uppercase;
+				font-weight: bold;
+				text-align:right;
+				padding-right: 15px;
+			}
+
+			a.backtoplink {
+				font : normal 8pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #9C9A63;
+				text-decoration : underline;
+				padding: 1px; 
+			} 
+			a.backtoplink:hover {
+				font : bold 8pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #9C9A63;
+				text-decoration : underline;
+				padding: 1px; 
+			}
+			a.bodylink {
+				font : normal 9pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #007963;
+				text-decoration : none;
+				padding: 0px; 
+			} 
+			a.bodylink:hover {
+				font : normal 9pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #007963;
+				text-decoration : underline;
+				padding: 0px; 
+			}
+			a.mainlink {
+				font : bold 8pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #000080;
+				text-decoration : none;
+				padding: 1px; 
+			} 
+			a.mainlink:hover {
+				font : bold 8pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #000080;
+				text-decoration : underline;
+				padding: 1px; 
+			}
+			a.normallink {
+				font : normal 8pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #250387;
+				text-decoration : underline;
+				padding: 1px; 
+			} 
+			a.normallink:hover {
+				font : normal 8pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #317613;
+				text-decoration : underline;
+				padding: 1px; 
+			}
+			a.normallinkright {
+				font : normal 8pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #250387;
+				text-decoration : underline;
+				padding: 1px; 
+				text-align: right;
+				text-transform: uppercase;
+			} 
+			a.redlink {
+				font : italic 9pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #840000;
+				text-decoration : underline;
+				padding: 0px; 
+			} 
+			a.redlink:hover {
+				font : italic 9pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #840000;
+				text-decoration : underline;
+				padding: 0px; 
+			}
+			a.reglink {
+				font : normal 9pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #840000;
+				text-decoration : underline;
+				padding: 0px; 
+			} 
+			a.reglink:hover {
+				font : normal 9pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #840000;
+				text-decoration : underline;
+				padding: 0px; 
+			}			
+			a.smalllink {
+				font : normal 7.5pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #00309C;
+				text-decoration : underline;
+				margin-left:0;
+				margin-right:0;
+				margin-top:0;
+				margin-bottom:0;
+			} 
+			a.smalllink:hover {
+				font : normal 7.5pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #639ACE;
+				text-decoration : underline;
+				margin-left:0;
+				margin-right:0;
+				margin-top:0;
+				margin-bottom:0;
+			}						
+			a.toplink {
+				font : normal 8pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #808080;
+				text-decoration : none;
+				padding: 0px; 
+			} 
+			a.toplink:hover {
+				font : normal 8pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #808080;
+				text-decoration : underline;
+				padding: 0px; 
+			}
+			a.topredlink {
+				font : normal 8pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #840000;
+				text-decoration : underline;
+				padding: 0px; 
+			} 
+			a.topredlink:hover {
+				font : normal 8pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #840000;
+				text-decoration : underline;
+				padding: 0px; 
+			}
+				
+			.nolink {
+				font : bold 8pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #808080;
+				text-decoration : none;
+				padding: 0px; 
+			}
+			input {
+				font : normal 8pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #000000;
+				text-decoration : none;
+				padding: 0px; 
+			}
+			input.readonly {
+				font : normal 8pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #000000;
+				text-decoration : none;
+				padding: 0px; 
+				background: #D5E0FD;
+			}
+			input.readonly2 {
+				font : bold 9pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #000066;
+				text-decoration : none;
+				padding: 0px;	
+				height: 22px;
+				letter-spacing: 1;	
+				background: #D5E0FD;
+			}
+			select {
+				font : bold 8pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #10516B;
+				text-decoration : none;
+				padding: 0px;
+				background: #F7F6FA; 				
+			}
+			a.header {
+				font : bold 11pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #10516B;
+				text-decoration : none;
+				padding: 0px;				
+			}
+			.txtboldgreen {
+				font : bold 11pt Verdana, Arial, Helvetica, sans-serif; 
+				color: #007963;
+			}
+			.subheading {
+				font : bold 12pt Verdana, Arial, Helvetica, sans-serif; 
+				color: #808080;
+				background: #efefef;
+			}
+			li.directions {
+				font : normal 8pt Tahoma, Arial, Helvetica, sans-serif; 
+				color: #000000;
+				line-height: 16px;
+				font-size: 12px;
+			}
+			.notes {
+				font : normal 8pt Tahoma, Arial, Helvetica, sans-serif; 
+				color: #990000;
+				padding-left: 5px;
+				font-size: 12px;
+			}
+			td.holiday {
+				font : normal 8pt Tahoma, Arial, Helvetica, sans-serif; 
+				color : #000066;
+				text-decoration : none;
+				padding: 0px; 
+			}
+			td.app {
+				font : normal 8pt Tahoma, Arial, Helvetica, sans-serif; 
+				color : #000066;
+				text-decoration : none;
+				padding: 0px; 
+			}
+			input.app, select.app {
+				font : bold 9pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #000066;
+				text-decoration : none;
+				padding: 0px;	
+				height: 22px;
+				width: 115px;		
+				letter-spacing: 1;	
+			}
+			input.app2 {
+				font : bold 9pt Verdana, Arial, Helvetica, sans-serif; 
+				color : #000066;
+				text-decoration : none;
+				padding: 0px;	
+				height: 22px;
+				letter-spacing: 1;	
+			}
+			td.appsubheading {
+				font : bold 11pt Verdana, Arial, Helvetica, sans-serif; 
+				color: #1E274E;
+				background: #D5E0FD;
+				padding: 4px;
+				border : thin dotted Gray;
+			}
+			ul.errormsg
+			{
+	            color:#FF0000;
+	        }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+

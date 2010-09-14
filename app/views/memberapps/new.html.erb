@@ -1,0 +1,289 @@
+<h1>Membership Application Request</h1>
+                <p>
+        	        Just enter your information below to request membership.
+                </p>
+                <p>
+                    You must enter how you were referred to us. Please
+                    enter the name of the person who told you about us
+                    and their relationship to you. Or, enter the sponsoring
+                    group you are affiliated with. 
+                </p>
+                <p>
+                    You may also print out this form and mail, fax, or
+                    drop it at the credit union office.
+                </p>
+		        <h2>Customer Identification Program Policy</h2>
+                <p>
+        	        Important Information about Procedures for Opening a New Account:
+                </p>
+                <p>
+                    To help the government fight the funding of terrorism
+                    and money laundering activities, Federal law requires
+                    all financial institutions to obtain, verify, and
+                    record information that identifies each person who
+                    opens an account.
+                </p>
+                <p>
+                    What this means for you: When you open an account,
+                    we will ask for your name, address, date of birth,
+                    and other information that will allow us to identify
+                    you. We will also ask to see your driver's license
+                    or other identifying documents.
+                </p>
+                <p>
+                    In all cases, protection of our customer's identity
+                    and confidentiality is our pledge to you.
+                </p>
+
+<% form_for(@memberapp) do |f| %>
+  <%= f.error_messages %>
+  
+  <table class="memapp">
+            <tr>
+                <td colspan="3" class="appsubheading">Recommendation Information :</td>
+            </tr>
+            <tr>
+                <th class="sub" colspan="3">How did You Hear of Us:</th>
+            </tr>
+            <tr>
+            <td colspan="3">
+                <hr /></td>
+        </tr>
+            <tr>
+            <td>
+				
+				<%= f.radio_button("recommendation", "member") %>
+            </td>
+            <td align="left"><strong><i>Member:</i></strong></td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Member's Name:</td>
+            <td>
+				<%= f.text_field :recommended_name %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>Relationship:</td>
+            <td>
+                <%= f.text_field :relationship %></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <hr /></td>
+        </tr>
+        <tr>
+            <td>
+				<%= f.radio_button("recommendation", "affiliation") %>
+            </td>
+            <td align="left"><strong><i>Affiliation:</i></strong></td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Affiliated with:</td>
+            <td>
+				<%= f.text_field :affiliation %>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <hr /></td>
+        </tr>
+        <tr>
+            <td>
+				<%= f.radio_button("recommendation", "advertisement") %>
+            </td>
+            <td colspan="2" align="left"><strong><i> Advertisement:</i></strong></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td colspan="2">
+				<%= f.select( :advertisement,  
+				{ 	"Home reporter" => "Home reporter", 
+					"Bay News" => "Bay News", 
+					"Bay ridge Courier" => "Bay ridge Courier",
+					"Carnarsie Courier" => "Carnarsie Courier",
+					"Caribbean Life" => "Caribbean Life",
+                    "Courier Life" => "Courier Life",
+					"Russian Kurier" => "Russian Kurier",
+                    "Mini press" => "Mini press", 
+                    "Spectator" => "Spectator", 
+                    "Sunset news" => "Sunset news",
+                    "TLC Magazine" => "TLC Magazine",
+                    "Taxi insider" => "Taxi insider", 
+                    "Black Car News" => "Black Car News",
+                    "Aramica" => "Aramica",
+                    "Al Raya" => "Al Raya",
+                    "Russian Advertiser" => "Russian Advertiser",
+                    "Russian Bazaar" => "Russian Bazaar", 
+                    "Russian Reklama" => "Russian Reklama",
+                    "Russian Monitor" => "Russian Monitor", 
+                    "Urdu Times" => "Urdu Times"
+				}) %>                
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <hr /></td>
+        </tr>
+        <tr>
+            <td>
+				<%= f.radio_button("recommendation", "other") %>
+            </td>
+            <td colspan="2" align="left"><strong><i> Other:</i></strong></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td colspan="2">
+				<%= f.select( :other,  
+				{ "Person, Don't Know Name" => "Person, Don't Know Name", 
+				  "Postcard/Mailing" => "Postcard/Mailing", 
+				  "Search Engine" => "Search Engine", 
+                  "Web Surfing" => "Web Surfing", 
+				  "Marty Markowitz Newsletter" => "Marty Markowitz Newsletter", 
+                  "Other" => "Other"
+				 }) %> 
+            </td>
+        </tr>
+        </table>
+        <p>&nbsp;</p>
+        <table class="memapp">
+            <tr>
+                <td colspan="3" class="appsubheading">Applicant Information :</td>
+            </tr>
+            <tr>
+                <td class="app">First Name:<br />
+                    <%= f.text_field :first_name, :size => 15 %></td>
+                <td class="app">Middle Name/Initial:<br />
+                    <%= f.text_field :middle_name, :size => 5 %></td>
+                <td class="app">Last Name:<br />
+                    <%= f.text_field :last_name, :size => 15 %></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="app">Street Address:<br />
+                    <%= f.text_field :address %></td>
+				<td class="app">City:<br />
+                    <%= f.text_field :city, :size => 15 %></td>
+            </tr>
+            <tr>                
+                <td colspan="2" class="app">State:<br />
+					<%= f.select( :state,
+					{ "Alabama" => "AL", 
+					  "Alaska" => "AK", 
+					  "Arizona" => "AZ", 
+					  "Arkansas" => "AR", 
+					  "California" => "CA", 
+					  "Colorado" => "CO",
+					  "Connecticut" => "CT", 
+					  "Delaware" => "DE", 
+					  "District Of Columbia" => "DC", 
+					  "Florida" => "FL", 
+					  "Georgia" => "GA", 
+					  "Hawaii" => "HI",
+					  "Idaho" => "ID", 
+					  "Illinois" => "IL", 
+					  "Indiana" => "IN", 
+					  "Iowa" => "IO", 
+					  "Kansas" => "KS", 
+					  "Kentucky" => "KY",
+					  "Louisiana" => "LA", 
+					  "Maine" => "ME", 
+					  "Maryland" => "MD", 
+					  "Massachusetts" => "MA", 
+					  "Michigan" => "MI", 
+					  "Minnesota" => "MN",
+					  "Mississippi" => "MS", 
+					  "Missouri" => "MO", 
+					  "Montana" => "MT", 
+					  "Nebraska" => "NE", 
+					  "Nevada" => "NV", 
+					  "New Hampshire" => "NH",
+					  "New Jersey" => "NJ", 
+					  "New Mexico" => "NM", 
+					  "New York" => "NY", 
+					  "North Carolina" => "NC", 
+					  "North Dakota" => "ND", 
+					  "Ohio" => "OH",
+					  "Oklahoma" => "OK", 
+					  "Oregon" => "OR", 
+					  "Pennsylvania" => "PA", 
+					  "Rhode Island" => "RI", 
+					  "South Carolina" => "SC", 
+					  "South Dakota" => "SD",
+					  "Tennessee" => "TN", 
+					  "Texas" => "TX", 
+					  "Utah" => "UT", 
+					  "Vermont" => "VT", 
+					  "Virginia" => "VA", 
+					  "Washington" => "WA",
+					  "West Virginia" => "WV",
+					  "Wisconsin" => "WI",
+					  "Wyoming" => "WY"
+					 }) %> 
+	            </td>
+                <td class="app">Zip:<br />
+                    <%= f.text_field :zip, :maxlength => 5 %></td>
+            </tr>
+            <tr>
+                <td class="app" colspan="3"><hr /></td>
+            </tr>
+            <tr>
+                <td class="app">Home Phone:<br />
+                    <%= f.text_field :home_phone, :size => 10, :maxlength => 12 %><br />(###-###-####)</td>
+                <td class="app">Work Phone:<br />
+                    <%= f.text_field :work_phone, :size => 10, :maxlength => 12 %><br />(###-###-####)</td>
+                <td class="app">Cell Phone:<br />
+                    <%= f.text_field :cell_phone, :size => 10, :maxlength => 12 %><br />(###-###-####)</td>
+            </tr>
+            <tr>
+                <td class="app" colspan="3"><hr /></td>
+            </tr>
+            <tr>
+                <td class="app" colspan="3">Email:<br />
+                    <%= f.text_field :email_id %></td>
+            </tr>
+        </table>
+        
+        <p>&nbsp;</p>
+        <table class="memapp">
+            <tr>
+                <td class="app" colspan="3"><hr /></td>
+            </tr>
+            <tr>
+                <td class="app" colspan="3"><strong>Privacy
+                        Statement</strong><br />
+                    <br />
+                    All information entered on this site
+                    will be kept confidential. It will not
+                    be disclosed to others outside Bay Ridge
+                    Federal Credit Union and will be used
+                    exclusively for the purpose intended.
+                    Only authorized Bay Ridge Federal Credit
+                    Union employees who are trained in the
+                    proper handling of member/owner information
+                    will have access to this information. </td>
+            </tr>
+            <tr>
+                <td class="app" colspan="3"><hr /></td>
+            </tr>
+            <tr>
+                <td class="app" colspan="3" align="center">
+                	
+                    <br />
+                    <%= f.submit 'Submit Application' %>
+                    <br />
+                    <br />
+                    Please click once and wait.<br />
+                    Submission may take a few seconds to
+                    complete. 
+                </td>
+            </tr>
+            <tr>
+                <td class="app" colspan="3"><hr /></td>
+            </tr>
+        </table>
+<% end %>

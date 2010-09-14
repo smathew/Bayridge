@@ -1,0 +1,34 @@
+<div id="login">
+					<h1 class="tab">BAY RIDGE FEDERAL CREDIT UNION</h1>
+					<div class="innercontent clearfix">
+    				  <div class="innercontent body">
+                        <p>This calculator is solely for informational purposes and provides reasonably accurate results; the 
+                        calculations are not intended to be relied upon as actual savings results computations.
+                        <br />
+                        </p>
+                        <table class="calcs">
+                            <tr class="row1">
+                                <td><%= link_to "AUTO LOAN CALCULATOR", autocalc_path, :class => "header" %><br />
+                              		Compare your auto financing options.</td>
+                            </tr>
+                            <tr class="row2">
+                                <td><%= link_to "CREDIT CARD BALANCE CALCULATOR", ccbalance_calc_path, :class =>"header" %><br />
+                                    Figure out how to pay off your credit cards.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%= link_to "MORTGAGE CALCULATOR", fixedmortgage_path, :class => "header" %>
+                                      MORTGAGE CALCULATOR</a><br />
+                                      How much will your monthly mortgage payment be?
+                                </td>
+                            </tr>
+                            <tr class="row2">
+                                <td><%= link_to "REBATE vs.LOAN CALCULATOR", rebateloan_calc_path, :class => "header" %><br />
+                                      Figure out which is better for you...rebate or loan.
+                                </td>
+                            </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <h1 class="tabbottom"><%= link_to "Back", "javascript: history.back();", :class => "backbottomlink" %></h1>
+				</div>

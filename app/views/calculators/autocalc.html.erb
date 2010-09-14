@@ -1,0 +1,81 @@
+<table width="500">
+  <tr>
+	<td>
+		<strong>Use this calculator to compare your financing options.&nbsp; How to use the calculator:</strong>
+		<ui><li>Enter dollar figures without dollar signs or commas, so enter $16,000 simply as 16000</li>
+		<li>Enter percentages in decimal form without percent signs, so enter 8 1/2% as 8.5</li>
+        <li>Use the &quot;tab&quot; key to move from one field to the next.</li>
+	  </ui>
+	</td>
+  </tr>
+  <tr> 
+    <td> <CENTER>
+        <br>
+        <br>
+      </CENTER>
+	  <% form_tag(autocalcr_path, :method => :get) do %>
+        <CENTER>
+          <table Border=1 Cellpadding=7>
+            <tr> 
+              <td COLSPAN=2 BGCOLOR=#FFFFEE> 
+                <CENTER>
+                  <span class=FontThree> Auto Loan Calculator</span> 
+                </CENTER>
+              </td>
+            </tr>
+            <tr> </tr>
+            <tr> 
+              <td BGCOLOR=#EEEEEE> <span class=FontFour> Cost of Vehicle: </span> 
+              </td>
+              <td BGCOLOR=#EEFFEE> 
+                <input style="font-family: Verdana, Arial; font-size: 8pt" onFocus=select(); onBlur = checkCOV(this.form); NAME = CostOfVehicle VALUE=25000 >
+              </td>
+            </tr>
+            <tr> 
+              <td BGCOLOR=#EEEEEE> <span class=FontFour> Down Payment: </span> 
+              </td>
+              <td BGCOLOR=#FFEEEE> 
+                <INPUT style="font-family: Verdana, Arial; font-size: 8pt" onFocus=select(); onBlur = checkDP(this.form); NAME = DownPayment VALUE=5000 >
+              </td>
+            </tr>
+            <tr> 
+              <td BGCOLOR=#EEEEEE> <span class=FontFour> Vehicle Trade-In Value 
+                (if any): </span> </td>
+              <td BGCOLOR=#EEEEFF> 
+                <INPUT style="font-family: Verdana, Arial; font-size: 8pt" onFocus=select(); onBlur = checkTIV(this.form); NAME = TradeInValue VALUE=2000 >
+              </td>
+            </tr>
+            <tr> 
+              <td BGCOLOR=#EEEEEE> <span class=FontFour> Interest Rate: </span> 
+              </td>
+              <td BGCOLOR=#FFEEFF> 
+                <INPUT style="font-family: Verdana, Arial; font-size: 8pt" onFocus=select(); onBlur = checkIR(this.form); NAME = InterestRate VALUE=8 >
+              </td>
+            </tr>
+            <tr> 
+              <td BGCOLOR=#EEEEEE> <span class=FontFour> Number of Months: </span> 
+              </td>
+              <TD BGCOLOR=#EEFFEE> 
+                <INPUT style="font-family: Verdana, Arial; font-size: 8pt" onFocus=select(); onBlur = checkM(this.form); NAME = NumberOfMonths VALUE=48 >
+              </td>
+            </tr>
+            <tr> 
+              <td BGCOLOR=#EEEEEE> <span class=FontFour> Additional Principal 
+                Per Month: </span> </td>
+              <td BGCOLOR=#FFEEEE> 
+                <INPUT style="font-family: Verdana, Arial; font-size: 8pt" onFocus=select(); onBlur = checkAD(this.form); NAME = AdditionalPrincipal VALUE=0 >
+              </td>
+            </tr>
+            <tr> 
+              <td COLSPAN=2 BGCOLOR=#FFFFEE> <span class=FontFive> 
+                <input Type="radio" NAME="calculate_option" VALUE="0" CHECKED>
+                Calculate Payment Only<br />
+                <input Type="radio" NAME="calculate_option" VALUE="1">
+                Calculate Payment and Display Amortization Schedule<br />
+                </span> </td>
+            </tr>
+          </table>
+		  <%= javascript_include_tag "enda" %>
+        </center>
+      <% end %>
+</table>

@@ -1,0 +1,114 @@
+<p style="color: green", align=center><%= flash[:notice] %></p>
+<table>
+	<tr><td>
+	  <strong>Recommendation:</strong>
+	  </td><td>
+	  <%=h @memberapp.recommendation %>
+	</td></tr>
+	<% if (@memberapp.recommendation == "member") %>
+	<tr><td>
+	  <strong>Recommended name:</strong>
+	  </td><td>
+	  <%=h @memberapp.recommended_name %>
+	</td></tr>
+
+	<tr><td>
+	  <strong>Relationship:</strong>
+	  </td><td>
+	  <%=h @memberapp.relationship %>
+	</td></tr>
+	<% end %>
+
+	<% if (@memberapp.recommendation == "affiliation") %>
+	<tr><td>
+	  <strong>Affiliation:</strong>
+	  </td><td>
+	  <%=h @memberapp.affiliation %>
+	</td></tr>
+	<% end %>
+
+	<% if (@memberapp.recommendation == "advertisement") %>
+	<tr><td>
+	  <strong>Advertisement:</strong>
+	  </td><td>
+	  <%=h @memberapp.advertisement %>
+	</td></tr>
+	<% end %>
+	<% if (@memberapp.recommendation == "other") %>
+	<tr><td>
+	  <strong>Other:</strong>
+	  </td><td>
+	  <%=h @memberapp.other %>
+	</td></tr>
+	<% end %>
+	<tr><td>
+	  <strong>First name:</strong>
+	  </td><td>
+	  <%=h @memberapp.first_name %>
+	</td></tr>
+
+	<tr><td>
+	  <strong>Middle Name:</strong>
+	  </td><td>
+	  <%=h @memberapp.middle_name %>
+	</td></tr>
+
+	<tr><td>
+	  <strong>Last Name:</strong>
+	  </td><td>
+	  <%=h @memberapp.last_name %>
+	</td></tr>
+
+	<tr><td>
+	  <strong>Address:</strong>
+	  </td><td>
+	  <%=h @memberapp.address %>
+	</td></tr>
+
+	<tr><td>
+	  <strong>City:</strong>
+	  </td><td>
+	  <%=h @memberapp.city %>
+	</td></tr>
+
+	<tr><td>
+	  <strong>State:</strong>
+	  </td><td>
+	  <%=h @memberapp.state %>
+	</td></tr>
+	
+	<tr><td>
+	  <strong>Zip:</strong>
+	  </td><td>
+	  <%=h @memberapp.zip %>
+	</td></tr>
+
+	<tr><td>
+	  <strong>Home Phone:</strong>
+	  </td><td>
+	  <%=h @memberapp.home_phone %>
+	</td></tr>
+
+	<% if !@memberapp.work_phone.blank? %>
+	<tr><td>
+	  <strong>Work Phone:</strong>
+	  </td><td>
+	  <%=h @memberapp.work_phone %>
+	</td></tr>
+	<% end %>
+	<% if !@memberapp.cell_phone.blank? %>
+	<tr><td>
+	  <strong>Cell Phone:</strong>
+	  </td><td>
+	  <%=h @memberapp.cell_phone %>
+	</td></tr>
+	<% end %>
+	<tr><td>
+	  <strong>Email Address:</strong>
+	  </td><td>
+	  <%=h @memberapp.email_id %>
+	</td></tr>
+</table>
+<br />
+<p align=center>
+<%= link_to "Go Home", root_path %></p>

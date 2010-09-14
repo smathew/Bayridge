@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>.:: Bay Ridge Federal Credit Union ::.</title>
+	<%= stylesheet_link_tag 'bayridge' %>
+	<%= javascript_include_tag "client" %>
+	<%= javascript_include_tag "functions" %>
+	<%= javascript_include_tag "site" %>
+	<!-- [the following are the files related to calculators]>
+		<%= javascript_include_tag "pad" %>
+		<%= javascript_include_tag "style" %>
+		<%= javascript_include_tag "read" %>
+	<!--
+</head>
+<body>
+	<%= render "layouts/header" %>
+    <%= yield %>
+    <%= render "layouts/footer" %>
+</body>
+</html>
